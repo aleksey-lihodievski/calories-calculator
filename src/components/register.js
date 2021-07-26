@@ -1,25 +1,23 @@
 import React, { useState } from "react";
 
-import { NavLink, useHistory } from "react-router-dom";
-
 import "../Login.css";
 
+import { NavLink, useHistory } from "react-router-dom";
 import { auth } from "../firebase";
 
-function Login() {
-  const history = useHistory();
-
+function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory()
 
-  const signIn = (event) => {
+  const signUp = (event) => {
     event.preventDefault();
     auth
-      .signInWithEmailAndPassword(email, password)
+      .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
         console.log(auth);
-        if (auth) {
-          history.push("/meals");
+        if(auth) {
+            history.push('/meals');
         }
       })
       .catch((error) => {
@@ -31,7 +29,7 @@ function Login() {
     <section className="login">
       <div className="container">
         <form className="form">
-          <h1 className="form-header">Войти сейчас</h1>
+          <h1 className="form-header">Зарегистрироваться</h1>
           <input
             type="email"
             placeholder="Email"
@@ -48,12 +46,12 @@ function Login() {
           />
           <input
             type="submit"
-            value="Войти"
+            value="Зарегистрироваться"
             className="login-button"
-            onClick={(e) => signIn(e)}
+            onClick={(e) => signUp(e)}
           />
           <p className="forgot">
-            Нет аккаунта? <NavLink to="/register">Зарегистрироваться</NavLink>
+            Есть аккаунт? <NavLink to="/login">Войти</NavLink>
           </p>
         </form>
       </div>
@@ -61,4 +59,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;

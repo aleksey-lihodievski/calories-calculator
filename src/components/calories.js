@@ -2,11 +2,13 @@ import React from "react";
 
 import Navigation from "./navigation";
 
+import "../Calories.css";
+
 function Calories() {
   return (
     <section className="calories">
       <div className="daily-calories container">
-        <h1 className="dayly-calories__header">Дневные калории</h1>
+        <h1 className="daily-calories__header">Дневные калории</h1>
         <div className="calories__stats">
           <div className="calories__elements">
             <div className="calories__element proteins">
@@ -49,7 +51,6 @@ function Calories() {
           </div>
         </div>
       </div>
-      <Navigation></Navigation>
     </section>
   );
 }
