@@ -60,41 +60,6 @@
     height: 30px;
   }
   
-  .navigation {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: #98c14b;
-  }
-  
-  .navigation-elements {
-    display: flex;
-    padding: 0 35px;
-    justify-content: space-around;
-    list-style: none;
-    padding-bottom: 35px;
-    padding-top: 7px;
-  }
-  
-  .nav-element {
-    font-size: 20px;
-    color: #fff;
-  }
-  
-  .nav-element a {
-    padding: 5px 13px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-  }
-  
-  .navigation-element__tab-name {
-    display: none;
-    color: #98c14b;
-  }
-  
   .active {
     background-color: #749538;
   }

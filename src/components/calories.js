@@ -1,10 +1,13 @@
 import React from "react";
+import Meal from "./meal";
+import Search from "./search";
 
 import Navigation from "./navigation";
 
 import "../Calories.css";
 
 function Calories() {
+  
   return (
     <section className="calories">
       <div className="daily-calories container">
@@ -30,25 +33,31 @@ function Calories() {
           </div>
         </div>
         <div className="meals">
-          <div className="meal meals__breakfast">
+          <Meal className="meals__breakfast">
             <h2 className="meals__header">Завтрак</h2>
             <p className="meals__compound">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
               inventore officiis
             </p>
-          </div>
-          <div className="meal meals__lunch">
+            <Search>
+              <p>Завтрак</p>
+            </Search>
+          </Meal>
+
+          <Meal className="meals__lunch">
             <h2 className="meals__header">Обед</h2>
             <p className="meals__compound">Омлет с компотом</p>
-          </div>
-          <div className="meal meals__dinner">
+          </Meal>
+
+          <Meal className="meals__dinner">
             <h2 className="meals__header">Ужин</h2>
             <p className="meals__compound">Омлет с компотом</p>
-          </div>
-          <div className="meal meals__other">
+          </Meal>
+
+          <Meal className="meals__other">
             <h2 className="meals__header">Другое</h2>
             <p className="meals__compound">Омлет с компотом</p>
-          </div>
+          </Meal>
         </div>
       </div>
     </section>

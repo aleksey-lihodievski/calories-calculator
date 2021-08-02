@@ -6,6 +6,7 @@ import Navigation from "./components/navigation";
 import Login from "./components/login";
 import Register from "./components/register";
 import Settings from "./components/settings";
+import Statistics from "./components/statistics";
 
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import { auth } from "./firebase";
@@ -45,17 +46,13 @@ function App() {
   } else {
     return (
       <BrowserRouter>
-        <Route exact path="/" component={Calories}></Route>
-        <Route path="*">
-          <Redirect to="/meals" />
-        </Route>
-
         <Route exact path="/meals" component={Calories} />
-        <Route path="/statistics" component={Calories} />
+        <Route path="/statistics" component={Statistics} />
         <Route path="/settings" component={Settings} />
 
-        <Route path="/login" component={Login}></Route>
-        <Route path="/register" component={Register}></Route>
+        <Route exact path="/">
+          <Redirect to="/meals" />
+        </Route>
         <Navigation></Navigation>
       </BrowserRouter>
     );

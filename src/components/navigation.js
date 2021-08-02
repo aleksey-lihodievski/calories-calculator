@@ -8,6 +8,7 @@ import user from "../images/user.svg";
 import activeUser from "../images/user-green.svg";
 
 import NavigationElement from "./navigationElement";
+import "../Navigation.css";
 
 function Navigation() {
   return (
