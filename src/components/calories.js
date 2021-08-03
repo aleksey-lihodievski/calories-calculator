@@ -1,6 +1,6 @@
 import React from "react";
 import Meal from "./meal";
-import Search from "./search";
+// import Search from "./search";
 
 import Navigation from "./navigation";
 
@@ -33,28 +33,25 @@ function Calories() {
           </div>
         </div>
         <div className="meals">
-          <Meal className="meals__breakfast">
+          <Meal className="meals__breakfast" meal="Завтрак">
             <h2 className="meals__header">Завтрак</h2>
             <p className="meals__compound">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
               inventore officiis
             </p>
-            <Search>
-              <p>Завтрак</p>
-            </Search>
           </Meal>
 
-          <Meal className="meals__lunch">
+          <Meal className="meals__lunch" meal="Обед">
             <h2 className="meals__header">Обед</h2>
             <p className="meals__compound">Омлет с компотом</p>
           </Meal>
 
-          <Meal className="meals__dinner">
+          <Meal className="meals__dinner" meal="Ужин">
             <h2 className="meals__header">Ужин</h2>
             <p className="meals__compound">Омлет с компотом</p>
           </Meal>
 
-          <Meal className="meals__other">
+          <Meal className="meals__other" meal="Другое">
             <h2 className="meals__header">Другое</h2>
             <p className="meals__compound">Омлет с компотом</p>
           </Meal>
