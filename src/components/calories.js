@@ -33,7 +33,7 @@ function Calories() {
           </div>
         </div>
         <div className="meals">
-          <Meal className="meals__breakfast" meal="Завтрак">
+          <Meal className="meals__breakfast" mealType="Завтрак">
             <h2 className="meals__header">Завтрак</h2>
             <p className="meals__compound">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
@@ -41,17 +41,17 @@ function Calories() {
             </p>
           </Meal>
 
-          <Meal className="meals__lunch" meal="Обед">
+          <Meal className="meals__lunch" mealType="Обед">
             <h2 className="meals__header">Обед</h2>
             <p className="meals__compound">Омлет с компотом</p>
           </Meal>
 
-          <Meal className="meals__dinner" meal="Ужин">
+          <Meal className="meals__dinner" mealType="Ужин">
             <h2 className="meals__header">Ужин</h2>
             <p className="meals__compound">Омлет с компотом</p>
           </Meal>
 
-          <Meal className="meals__other" meal="Другое">
+          <Meal className="meals__other" mealType="Другое">
             <h2 className="meals__header">Другое</h2>
             <p className="meals__compound">Омлет с компотом</p>
           </Meal>

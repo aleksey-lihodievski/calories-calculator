@@ -1,13 +1,24 @@
 .search {
+  position: relative;
+  padding-top: 10vh;
   z-index: 20;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   background-color: #84a841;
   position: fixed;
   top: 101vh;
   left: 0;
+  transition: 0.5s top ease;
 }
 
 .search-area__active {
-  top: 0;
+  top: -10vh;
+  border-radius: 5vh;
+}
+
+.back-icon {
+  position: absolute;
+  top: 11vh;
+  left: 10px;
+  cursor: pointer;
 }
